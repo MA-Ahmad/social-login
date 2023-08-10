@@ -1,12 +1,15 @@
 import React from 'react'
 import { ChakraProvider, CSSReset } from '@chakra-ui/react'
-import TwitterLogin from './TwitterLogin'
+import Navigation from './Navigation'
+import { BrowserRouter } from 'react-router-dom'
 
 function App() {
   return (
     <ChakraProvider>
       <CSSReset />
-      <TwitterLogin />
+      <BrowserRouter>
+        <Navigation />
+      </BrowserRouter>
     </ChakraProvider>
   )
 }
