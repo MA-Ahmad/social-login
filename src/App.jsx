@@ -1,11 +1,14 @@
 import React from 'react'
+import { ChakraProvider, CSSReset } from '@chakra-ui/react'
+import TwitterLogin from './TwitterLogin'
 
-const TwitterLoginButton = () => {
-  const handleTwitterLogin = () => {
-    window.location.href = 'http://localhost:3001/auth/twitter' // Replace with your backend OAuth 2.0 authentication URL
-  }
-
-  return <button onClick={handleTwitterLogin}>Login with Twitter</button>
+function App() {
+  return (
+    <ChakraProvider>
+      <CSSReset />
+      <TwitterLogin />
+    </ChakraProvider>
+  )
 }
 
-export default TwitterLoginButton
+export default App
